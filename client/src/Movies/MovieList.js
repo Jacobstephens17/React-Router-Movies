@@ -1,5 +1,5 @@
 import React from 'react';
-import Movie from './Movie'
+import { Link, useRouterMatch } from "react-router-dom"
 
 export default function MovieList(props) {
   return (

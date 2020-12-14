@@ -34,26 +34,22 @@ export default function App () {
 
   return (
     <div>
-      <SavedList list={[ /* This is stretch */]} />
+     <SavedList list={[ /* This is stretch */]} />
       {/* <Route path='/'>
         <App/>
       </Route> */}
       {/* <Route component={MovieList} exact path='/Movies/MovieList'/>
       <Route component={Movie} exact path='/Movies/Movie/:id'/> */}
-      <div>
-      <Switch>
-
-        <Route path={`/movies/:movieId`}>
+        <Route path={`/movies/:movieID`} >
           <Movie/>
         </Route>
 
-        <Route exact path='/'>
-          <MovieList movies={movieList}/>
+        {/* <Link to ='/movies'>Movies</Link>
+        <Link to='/'>Movie List</Link> */}
+        <Route>
+          <MovieList movies ={movieList}/>
         </Route>
-
-      </Switch>
-
-      </div>
+        
     </div>
   );
 }
