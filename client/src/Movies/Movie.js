@@ -22,7 +22,7 @@ export default function Movie(props) {
 
     // This effect should run every time time
     // the `id` changes... How could we do this?
-  }, [id]);
+  }, [{id}]);
 
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = evt => { }
