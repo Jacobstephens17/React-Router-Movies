@@ -40,20 +40,14 @@ export default function App () {
       <Route component={Movie} exact path='/Movies/Movie/:id'/> */}
     <div>
 
-      <Link to='/'>Movie List</Link><br/>
-      <Link to='/:movieID'>Movie</Link>
-
-      <Switch>
-
-        <Route component={Movie} path='/:movieID' >
-          <Movie movies={movieList.id}/>
-        </Route>
-        
-        <Route exact path='/'>
+        <Route path='/' component={movieList}>
           <MovieList movies={movieList}/>
         </Route>
+
+        <Route component={Movie} path='/MovieDetails' >
+          <Movie movies={movieList}/>
+        </Route>
         
-      </Switch>
     </div>
 </div>
   );
