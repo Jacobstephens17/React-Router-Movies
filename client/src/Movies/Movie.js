@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 export default function Movie(props) {
   const [movie, setMovie] = useState();
 
-  let {id} = useParams().movieID;
+  let {id} = useParams();
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
   useEffect(() => {
@@ -35,7 +35,9 @@ export default function Movie(props) {
 
   return (
     <div className="save-wrapper">
-      <div className="movie-card">
+
+      <div className="movie-card" >
+
         <h2>{title}</h2>
         <div className="movie-director">
           Director: <em>{director}</em>
