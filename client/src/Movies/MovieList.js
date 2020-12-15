@@ -12,17 +12,21 @@ export default function MovieList(props) {
 }
 
 function MovieDetails(props) {
-  const { title, director, metascore } = props.movie;
+  const { title, director, metascore, id } = props.movie;
 
   return (
-    <div onClick={() =>{ console.log (props.movie) } } className="movie-card">
+    <Link to={`movies/${id}`}>
+    
+    <div className="movie-card">
       <h2>{title}</h2>
       <div className="movie-director">
-        Director: <em>{director}</em>
+        Director: <em>{props.director}</em>
       </div>
       <div className="movie-metascore">
-        Metascore: <strong>{metascore}</strong>
+        Metascore: <strong>{props.metascore}</strong>
       </div>
     </div>
+
+    </Link>
   );
 }
